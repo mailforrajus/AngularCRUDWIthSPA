@@ -1,0 +1,30 @@
+<<p>
+  second-component works!
+  </p>
+  <form [formGroup]="formData" (ngSubmit)="register()">
+    <div>
+      <label>
+        Employee Id
+      </label>
+      <input type="number" formControlName="employeeId">
+      <span *ngIf="formData.controls['employeeId'].hasError('required')">Id must be required</span>
+    </div>
+    <div>
+      <label>
+        Employee Name
+      </label>
+      <input type="text" formControlName="employeeName">
+      <span *ngIf="formData.controls['employeeName'].hasError('required')">Id must be required</span>
+    </div>
+    <div>
+      <label>
+        Employee Salary
+      </label>
+      <input type="number"   formControlName="employeeSalary">
+      <span *ngIf="formData.controls['employeeSalary'].hasError('required')">Id must be required</span>
+
+    </div>
+    <input type="submit" value="Register">
+  </form>
+  <span *ngIf="empSavedStatus" appCustomDirective>Saved Successfully
+  </span>

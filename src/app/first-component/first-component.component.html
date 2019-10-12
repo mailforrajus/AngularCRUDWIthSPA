@@ -1,0 +1,22 @@
+<p>
+  first-component works!
+</p>
+
+<table appCustomDirective>
+  <tr>
+    <td>
+      Employee Id
+    </td>
+    <td>
+      Employee Name
+    </td>
+    <td>
+      Employee Salary
+    </td>
+  </tr>
+  <tr *ngFor="let x of empResult">
+    <td>{{x.employeeId}}</td>
+    <td>{{x.employeeName}}</td>
+    <td>{{x.employeeSalary}}</td>
+  </tr>
+</table>
